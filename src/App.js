@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import CardList from './components/CardList/CardList.js';
+import CardLayout from './components/CardLayout/CardLayout'
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
-      <CardList />
+      <header className='top'> 
+      <img id="logo" src={`${process.env.PUBLIC_URL}/game-shrimp-fulls.png`} alt="shrimp logo"/>
+      <p>A hub for information about popular games.</p>
+        </header>
+      <CardLayout />
+      
     </div>
   );
 }
