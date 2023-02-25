@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import CardLayout from './components/CardLayout/CardLayout'
+import Footer from './components/Footer/Footer';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <p>A hub for information about popular games.</p>
         </header>
       <CardLayout />
+      <Footer />
       
     </div>
   );
