@@ -5,9 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgb(72, 101, 142), rgb(156, 108, 208));
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form input {
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(221, 207, 252);
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(0, 91, 160);
+  border: 2px solid rgb(92, 118, 232);
+  border-radius: 5px;
+  color: lime;
 }
