@@ -10,12 +10,13 @@ export default function CardLayout({ data, query, setQuery }) {
         <div>
             <form className="search">
                 <input
-                    value={query}
+                    // value={'query'}
                     placeholder="search"
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={fetch(`https://api.rawg.io/api/games?key=32de51e296df41328d00a906b8ce6b29&search=${query}`)}
                 />
                 <button type="submit">Search</button>
             </form>
+
             <section className="CardLayout">
                 {data === null ? "loading..." : data.results.map((game) => {
                     return <section>

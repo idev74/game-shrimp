@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color:#9c6cd0;
+  background-image: linear-gradient(#9c6cd0, rgb(72, 101, 142));
 }
 
 img {

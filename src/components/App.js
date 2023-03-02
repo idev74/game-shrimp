@@ -5,6 +5,7 @@ import CardDetails from './CardDetails/CardDetails';
 import CardLayout from './CardLayout/CardLayout'
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
+import About from './About/About';
 
 const apiURL = process.env.REACT_APP_API_URL
 const apiKey = process.env.REACT_APP_API_KEY
@@ -53,6 +54,7 @@ export default function App() {
             setQuery={setQuery}
           />} />
         <Route path="/details/:id" element={<CardDetails data={data} />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </div>
