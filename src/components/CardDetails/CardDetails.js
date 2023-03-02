@@ -1,10 +1,7 @@
 import { useParams } from "react-router-dom";
-import App from "../App";
 import './CardDetails.css'
 
 export default function CardDetails({ data }) {
-    const apiURL = process.env.REACT_APP_API_URL
-    const apiKey = process.env.REACT_APP_API_KEY
     const { id } = useParams()
     const game = data.results.filter((game) => {
         return game.id == id
@@ -16,8 +13,19 @@ export default function CardDetails({ data }) {
                 (<div>
                     <p className="title">{game.name} Details</p>
                     <img src={game.background_image} alt="game" />
-                    <p className="name"><strong>ESRB Rating: </strong>{apiURL}</p>
-                    <p className="rating">Rating: {}</p>
+                    <section className="CardDetails">
+                        <a href="https://store.steampowered.com/">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670382.png" alt="steam" />
+                        </a>
+
+                        <a href="https://www.playstation.com/en-us/">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1241/1241001.png" alt="ps" />
+                        </a>
+
+                        <a href="https://www.xbox.com/en-us/">
+                            <img src="https://cdn-icons-png.flaticon.com/512/250/250562.png" alt="xbox" />
+                        </a>
+                    </section>
                 </div>)}
         </section>
     )

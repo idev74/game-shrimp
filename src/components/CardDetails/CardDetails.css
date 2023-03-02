@@ -8,3 +8,9 @@
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+.CardDetails a img {
+    margin: 1em;
+    height: 100px;
+    width: 100px;
+}

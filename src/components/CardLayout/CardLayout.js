@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './CardLayout.css'
 import CardList from "../CardList/CardList";
 import { Link } from "react-router-dom";
@@ -21,12 +21,10 @@ export default function CardLayout({ data, query, setQuery }) {
         .then(res => res.json())
         .then(({ results }) => {
             results === null ? alert('no games found') : setGameResults(results)
-            console.log(results)
         })
         setSearchTerm("")
     }
 
-    console.log(gameResults)
         if (gameResults !== null) {
             return (
                 <div>
