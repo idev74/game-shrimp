@@ -18,7 +18,6 @@ export default function App() {
     async function getStuff() {
       let res = await fetch(`${apiURL}?page=${1}&page_size=40&key=${apiKey}`)
       let json = await res.json()
-      console.log(json)
       res = await fetch(`${apiURL}?page=${2}&page_size=40&key=${apiKey}`)
       let update = await res.json()
       json.results.push(...update.results)
@@ -37,7 +36,6 @@ export default function App() {
       res = await fetch(`${apiURL}?page=${7}&page_size=40&key=${apiKey}`)
       update = await res.json()
       json.results.push(...update.results)
-      console.log(json)
       setData(json)
     }
     getStuff()
