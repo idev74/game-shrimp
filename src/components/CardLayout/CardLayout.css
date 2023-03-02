@@ -18,6 +18,14 @@
 
 }
 
+.CardLayout section:hover {
+    transform: 200%;
+    margin: 4px 2px;
+    opacity: 1.1;
+    transition: 0.3s;
+    background-color: aquamarine;
+}
+
 .CardLayout p {
     color: rgb(255, 255, 255);
     margin: 10px 0 0 0;

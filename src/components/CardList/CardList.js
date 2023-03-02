@@ -11,8 +11,8 @@ export default function CardList({game}) {
         <div className='GameImage'>
             <img src={background_image} className="pic" alt="game"/>
         </div>
-            <p className="name">{name}</p>
-            <p className="rating">Rating: {rating}</p>
+            <p className="name"><strong>{name}</strong></p>
+            <p className="rating"><strong>Rating: </strong>{rating}</p>
             <p className="released">{released}</p>
       </section>
     );
