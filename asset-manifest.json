@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/idevassy-acs-1320-final/static/css/main.a55bf4cd.css",
-    "main.js": "/idevassy-acs-1320-final/static/js/main.84d2de90.js",
-    "static/js/787.9a9b59e3.chunk.js": "/idevassy-acs-1320-final/static/js/787.9a9b59e3.chunk.js",
-    "index.html": "/idevassy-acs-1320-final/index.html",
-    "main.a55bf4cd.css.map": "/idevassy-acs-1320-final/static/css/main.a55bf4cd.css.map",
-    "main.84d2de90.js.map": "/idevassy-acs-1320-final/static/js/main.84d2de90.js.map",
-    "787.9a9b59e3.chunk.js.map": "/idevassy-acs-1320-final/static/js/787.9a9b59e3.chunk.js.map"
+    "main.css": "/game-shrimp/static/css/main.a55bf4cd.css",
+    "main.js": "/game-shrimp/static/js/main.b6a4bb49.js",
+    "static/js/787.9a9b59e3.chunk.js": "/game-shrimp/static/js/787.9a9b59e3.chunk.js",
+    "index.html": "/game-shrimp/index.html",
+    "main.a55bf4cd.css.map": "/game-shrimp/static/css/main.a55bf4cd.css.map",
+    "main.b6a4bb49.js.map": "/game-shrimp/static/js/main.b6a4bb49.js.map",
+    "787.9a9b59e3.chunk.js.map": "/game-shrimp/static/js/787.9a9b59e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a55bf4cd.css",
-    "static/js/main.84d2de90.js"
+    "static/js/main.b6a4bb49.js"
   ]
 }
