@@ -2,17 +2,14 @@ import React from 'react';
 import './App.css';
 import CardLayout from './components/CardLayout/CardLayout'
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 export default function App() {
   return (
     <div className="App">
-      <header className='top'> 
-      <img id="logo" src={`${process.env.PUBLIC_URL}/game-shrimp-fulls.png`} alt="shrimp logo"/>
-      <p>A hub for information about popular games.</p>
-        </header>
+      <Header />
       <CardLayout />
       <Footer />
-      
     </div>
   );
 }
