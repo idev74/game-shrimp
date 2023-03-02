@@ -5,8 +5,8 @@ A React app that shows off video games and information about them using the [RAW
 
 
 ### Wireframe: 
-![Wireframe JS Fundamentals](https://user-images.githubusercontent.com/77900249/222521965-257d1745-cf83-49c4-8549-686f7ba49845.png)
+![Wireframe JS Fundamentals](https://user-images.githubusercontent.com/77900249/222533058-5c8e6fbe-c12e-4f51-a6e5-f75638f66c02.png)
 
 
 ### First Iteration:
-![Screenshot 2023-03-02 at 11 30 07 AM](https://user-images.githubusercontent.com/77900249/222532581-5e50285f-efd2-4812-aa20-a10358d5c116.png)
+![Screenshot 2023-03-02 at 11 33 34 AM](https://user-images.githubusercontent.com/77900249/222533464-b35e0a73-7bcd-477d-9fc4-019cccfa9675.png)
