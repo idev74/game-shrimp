@@ -1,19 +1,16 @@
-img {
-    max-width: 350px;
-    max-height: 300px;
-}
-
-.CardList {
+.CardLayout {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2em;
     max-width: 1600px;
     padding: 1em;
- }
+    text-decoration: none;
+}
 
-.CardList section {
-    background-color:rgb(31, 22, 45);
+.CardLayout section {
+    background-image: radial-gradient(rgb(36, 8, 85), rgb(4, 77, 97));
+    background-attachment: fixed;
     border-radius: 10px;
     padding: 15px 0;
     max-width: 420px;
@@ -21,19 +18,19 @@ img {
 
 }
 
-.CardList img {
-    width: 330px;
-    border-radius: 8px;
+.CardLayout p {
+    color: rgb(255, 255, 255);
+    margin: 10px 0 0 0;
 }
 
 @media only screen and (max-width: 960px) {
-	.CardList {
-		grid-template-columns: 1fr 1fr;
-	}
+    .CardLayout {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 700px) {
-	.CardList {
-		grid-template-columns: 1fr;
-	}
+    .CardLayout {
+        grid-template-columns: 1fr;
+    }
 }
