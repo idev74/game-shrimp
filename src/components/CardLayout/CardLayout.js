@@ -60,7 +60,7 @@ export default function CardLayout({ data, query, setQuery }) {
                 </form>
             </div>
             <section className="CardLayout">
-            {data === null ? "loading..." : data.results.map((game) => {
+            {data === null ? "loading..." : data.map((game) => {
                 return <section>
                         <Link to={`/details/${game.id}`}>
                             <CardList

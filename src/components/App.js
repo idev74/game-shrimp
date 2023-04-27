@@ -13,37 +13,30 @@ const apiKey = process.env.REACT_APP_API_KEY
 export default function App() {
   const [query, setQuery] = useState('')
   const [data, setData] = useState(null)
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
-    async function getStuff() {
-      let res = await fetch(`${apiURL}?page=${1}&page_size=40&key=${apiKey}`)
-      let json = await res.json()
-      res = await fetch(`${apiURL}?page=${2}&page_size=40&key=${apiKey}`)
-      let update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${3}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${4}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${5}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${6}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${7}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      setData(json)
+    async function getStuff(page) {   
+      const res = await fetch(`${apiURL}?page=${page}&page_size=40&key=${apiKey}`)
+      const json = await res.json()
+      // console.log(json)
+      setData(json.results)
     }
-    getStuff()
-  }, []);
+    getStuff(page)
+  }, [page]);
 
   return (
     <div className="App">
       <Header />
+      <div>
+        {[1, 2, 3, 4, 5].map(num => {
+          return (
+            <button onClick={() => setPage(num)}>
+              {num}
+            </button>
+          )
+        })}
+      </div>
       <Routes>
         <Route path="/" element={
           <CardLayout
