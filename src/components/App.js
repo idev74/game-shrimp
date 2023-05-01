@@ -19,7 +19,6 @@ export default function App() {
     async function getStuff(page) {   
       const res = await fetch(`${apiURL}?page=${page}&page_size=40&key=${apiKey}`)
       const json = await res.json()
-      // console.log(json)
       setData(json.results)
     }
     getStuff(page)
@@ -44,8 +43,8 @@ export default function App() {
             query={query}
             setQuery={setQuery}
           />} />
-        <Route path="/details/:id" element={<CardDetails data={data} />} />
-        <Route path="/about" element={<About />} />
+        <Route path="#/details/:id" element={<CardDetails data={data} />} />
+        <Route path="#/about" element={<About />} />
       </Routes>
       <Footer />
     </div>
