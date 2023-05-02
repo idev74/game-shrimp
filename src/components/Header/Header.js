@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header>
+        <header className="bg-red-500">
            <Link to='/'>
             <img id="logo" src={`${process.env.PUBLIC_URL}/game-shrimp-fulls.png`} alt="shrimp with gaming headset" />
             </Link>

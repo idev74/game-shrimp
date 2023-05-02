@@ -35,7 +35,7 @@ export default function CardLayout({ data, query, setQuery }) {
                 </form>
                 </div>
                 
-                <section className="CardLayout">
+                <section  className="grid lg:grid-cols-3">
                 
                 {gameResults === [] ? "loading..." : gameResults.map((game) => {
                     return <section>
@@ -59,7 +59,7 @@ export default function CardLayout({ data, query, setQuery }) {
                     <button type="submit">Search</button>
                 </form>
             </div>
-            <section className="CardLayout">
+            <section className="grid lg:grid-cols-3">
             {data === null ? "loading..." : data.results.map((game) => {
                 return <section>
                         <Link to={`/details/${game.id}`}>
