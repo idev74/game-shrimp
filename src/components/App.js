@@ -19,31 +19,13 @@ export default function App() {
       let res = await fetch(`${apiURL}?page_size=40&key=${apiKey}`)
       let json = await res.json()
       console.log(json)
-      // res = await fetch(`${apiURL}?page=${2}&page_size=40&key=${apiKey}`)
-      // let update = await res.json()
-      // json.results.push(...update.results)
-      // res = await fetch(`${apiURL}?page=${3}&page_size=40&key=${apiKey}`)
-      // update = await res.json()
-      // json.results.push(...update.results)
-      // res = await fetch(`${apiURL}?page=${4}&page_size=40&key=${apiKey}`)
-      // update = await res.json()
-      // json.results.push(...update.results)
-      // res = await fetch(`${apiURL}?page=${5}&page_size=40&key=${apiKey}`)
-      // update = await res.json()
-      // json.results.push(...update.results)
-      // res = await fetch(`${apiURL}?page=${6}&page_size=40&key=${apiKey}`)
-      // update = await res.json()
-      // json.results.push(...update.results)
-      // res = await fetch(`${apiURL}?page=${7}&page_size=40&key=${apiKey}`)
-      // update = await res.json()
-      // json.results.push(...update.results)
       setData(json)
     }
     getStuff()
   }, []);
 
   return (
-    <main className="bg-blue-500">
+    <main className="flex flex-col bg-blue-500 min-h-screen">
       <Header />
       <Routes>
         <Route path="/" element={
