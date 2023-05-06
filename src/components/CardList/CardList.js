@@ -2,17 +2,16 @@ import '../App.css'
 import './CardList.css'
 
 export default function CardList({game}) {
-  const {id, background_image, name, rating, released, stores, publishers, genres, esrb_rating} = game
+  const {id, background_image, name, rating, released} = game
 
     return (
-      <section className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-pink-300 dark:border-gray-700">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img src={background_image} className="pic" alt="game"/>
+      <section className="mx-auto grid grid-cols-1 gap-4 max-w-xl p-10 text-white">
+        <div className="bg-gradient-to-br from-purple-900 to-teal-700 rounded-lg shadow-lg overflow-hidden w-full h-48 transition-all transform hover:scale-105 hover:bg-aquamarine-500">
+            <img src={background_image} className="pic" alt={name}/>
         </div>
             <p className="name"><strong>{name}</strong></p>
             <p className="rating"><strong>Rating: </strong>{rating}</p>
             <p className="released">{released}</p>
-
       </section>
     );
   }

@@ -3,10 +3,10 @@ import './Footer.css'
 
 export default function Footer() {
     return (
-        <div className="Footer">
+        <footer className="Footer">
             <p>Images and Data provided by 
             <a href="https://rawg.io/apidocs"> RAWG</a>
             </p>
-        </div>
+        </footer>
     )
 }

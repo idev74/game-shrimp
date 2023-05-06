@@ -18,50 +18,43 @@ export default function CardLayout({ data, query, setQuery }) {
 
         setGameResults([])
         fetch(`${apiURL}?search=${slug}&key=${apiKey}`)
-        .then(res => res.json())
-        .then(({ results }) => {
-            results === null ? alert('no games found') : setGameResults(results)
-        })
+            .then(res => res.json())
+            .then(({ results }) => {
+                results === null ? alert('no games found') : setGameResults(results)
+            })
         setSearchTerm("")
     }
 
-        if (gameResults !== null) {
-            return (
-                <div>
-                <div className="search">
-                <form className="search" onSubmit={onSubmit}>
-                <input type="text" value={searchTerm} onChange={handleChange} />
-                <button type="submit">Search</button>
+    if (gameResults !== null) {
+        return (
+            <section>
+                <form className="flex justify-center items-center" onSubmit={onSubmit}>
+                    <input className="w-1/2 rounded-md rounded-r-none p-3" type="text" value={searchTerm} onChange={handleChange} />
+                    <button className="bg-indigo-600 text-white px-6 text-lg font-semibold py-3 rounded-r-md" type="submit">Search</button>
                 </form>
-                </div>
-                
-                <section  className="grid lg:grid-cols-3">
-                
+
                 {gameResults === [] ? "loading..." : gameResults.map((game) => {
                     return <section>
-                    <Link to={`/details/${game.id}`}>
-                    <CardList
-                    key={game.id}
-                    game={game} />
-                    </Link>
+                        <Link to={`/details/${game.id}`}>
+                            <CardList
+                                key={game.id}
+                                game={game} />
+                        </Link>
                     </section>
                 })}
-                
-                </section>
-                </div>
-                )
-            }    
-        return (
-            <div>
-            <div className="search">
-                <form className="search" onSubmit={onSubmit}>
-                    <input type="text" value={searchTerm} onChange={handleChange} />
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-            <section className="grid lg:grid-cols-3">
-            {data === null ? "loading..." : data.results.map((game) => {
-                return <section>
+
+            </section>
+        )
+    }
+    return (
+        <section>
+            <form className="flex justify-center items-center" onSubmit={onSubmit}>
+                <input className="w-1/2 rounded-md rounded-r-none p-3" type="text" value={searchTerm} onChange={handleChange} />
+                <button className="bg-indigo-600 text-white px-6 text-lg font-semibold py-3 rounded-r-md" type="submit">Search</button>
+            </form>
+            <section className="grid xl:grid-cols-4 lg:grid-cols-3">
+                {data === null ? "loading..." : data.results.map((game) => {
+                    return <section className="">
                         <Link to={`/details/${game.id}`}>
                             <CardList
                                 key={game.id}
@@ -70,6 +63,6 @@ export default function CardLayout({ data, query, setQuery }) {
                     </section>
                 })}
             </section>
-        </div>
-        )
-    }
+        </section>
+    )
+}

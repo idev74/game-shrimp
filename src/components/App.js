@@ -16,8 +16,9 @@ export default function App() {
 
   useEffect(() => {
     async function getStuff() {
-      let res = await fetch(`${apiURL}/lists/main?key=${apiKey}`)
+      let res = await fetch(`${apiURL}?page_size=40&key=${apiKey}`)
       let json = await res.json()
+      console.log(json)
       // res = await fetch(`${apiURL}?page=${2}&page_size=40&key=${apiKey}`)
       // let update = await res.json()
       // json.results.push(...update.results)
@@ -42,7 +43,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="App">
+    <main className="bg-blue-500">
       <Header />
       <Routes>
         <Route path="/" element={
@@ -55,6 +56,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
-    </div>
+    </main>
   );
 }
