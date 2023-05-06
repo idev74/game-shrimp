@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import React from 'react';
-import './CardDetails.css'
 
 export default function CardDetails({ data }) {
     const { id } = useParams()

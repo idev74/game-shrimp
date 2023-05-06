@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './CardLayout.css'
 import CardList from "../CardList/CardList";
 import { Link } from "react-router-dom";
 
