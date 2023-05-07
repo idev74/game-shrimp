@@ -7,15 +7,9 @@ export default function Header() {
             <Link to='/'>
                 <img id="logo" src={`${process.env.PUBLIC_URL}/game-shrimp-fulls.png`} alt="shrimp with gaming headset" />
             </Link>
-            <h2>A hub for information about popular games!</h2>
-            <div className="nav">
-                <NavLink
-                    className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white"
-                    to="/">List</NavLink>
-                <NavLink
-                    className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white"
-                    to="/about">About</NavLink>
-            </div>
+            <h1 className="italic text-3xl text-white my-5">A hub of information about games large and small!</h1>
         </header>
+
+        
     )
 }

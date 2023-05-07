@@ -4,7 +4,7 @@ export default function CardList({ game }) {
   const { id, background_image, name, rating, released } = game
 
   return (
-    <section className="m-4 h-[400px] rounded-md text-white bg-gradient-to-br from-purple-900 to-teal-700 shadow-lg">
+    <section className="m-4 h-[400px] rounded-md text-white bg-sky-800 shadow-lg shadow-cyan-300/50">
       <div className="h-[60%] w-full">
         <img className="object-cover w-full h-full object-top rounded-t-md" src={background_image} alt={name} />
       </div>

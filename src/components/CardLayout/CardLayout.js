@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CardList from "../CardList/CardList";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 
 export default function CardLayout({ data, query, setQuery }) {
     const apiURL = process.env.REACT_APP_API_URL
@@ -27,12 +28,12 @@ export default function CardLayout({ data, query, setQuery }) {
     if (gameResults !== null) {
         return (
             <section>
-                <form className="flex justify-center items-center" onSubmit={onSubmit}>
+                <form for="search" className="flex justify-center items-center" onSubmit={onSubmit}>
                     <input className="w-1/2 rounded-md rounded-r-none p-3" type="text" value={searchTerm} onChange={handleChange} />
                     <button className="bg-indigo-600 text-white px-6 text-lg font-semibold py-3 rounded-r-md" type="submit">Search</button>
                 </form>
-                <section className="grid xl:grid-cols-4 lg:grid-cols-3">
-                    {gameResults === [] ? "loading..." : gameResults.map((game) => {
+                <main className="grid xl:grid-cols-4 lg:grid-cols-3">
+                    {gameResults === [] ? <section className="text-xl justify"><p>Loading...</p></section> : gameResults.map((game) => {
                         return <section>
                             <Link to={`/details/${game.id}`}>
                                 <CardList
@@ -41,19 +42,19 @@ export default function CardLayout({ data, query, setQuery }) {
                             </Link>
                         </section>
                     })}
-                </section>
+                </main>
             </section>
         )
     }
     return (
         <section className="flex-grow">
-            <form className="flex justify-center items-center" onSubmit={onSubmit}>
+            <form for="search" className="flex justify-center items-center" onSubmit={onSubmit}>
                 <input className="w-1/2 rounded-md rounded-r-none p-3" type="text" value={searchTerm} onChange={handleChange} />
                 <button className="bg-indigo-600 text-white px-6 text-lg font-semibold py-3 rounded-r-md" type="submit">Search</button>
             </form>
-            <section className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
-                {data === null ? "loading..." : data.results.map((game) => {
-                    return <section className="">
+            <main className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+                {data === null ? <p className="text-2xl">Loading...</p> : data.results.map((game) => {
+                    return <section>
                         <Link to={`/details/${game.id}`}>
                             <CardList
                                 key={game.id}
@@ -61,7 +62,7 @@ export default function CardLayout({ data, query, setQuery }) {
                         </Link>
                     </section>
                 })}
-            </section>
+            </main>
         </section>
     )
 }
