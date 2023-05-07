@@ -1,7 +1,7 @@
 import '../App.css'
 
 export default function CardList({ game }) {
-  const { id, background_image, name, rating, released } = game
+  const { background_image, name, rating, released } = game
 
   return (
     <section className="m-4 h-[400px] rounded-md text-white bg-sky-800 shadow-lg shadow-cyan-300/75">
