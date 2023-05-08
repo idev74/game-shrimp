@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import CardList from "../CardList/CardList";
-import { Link, NavLink } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
+import { Link } from "react-router-dom";
 
 export default function CardLayout({ data, query, setQuery }) {
     const apiURL = process.env.REACT_APP_API_URL
