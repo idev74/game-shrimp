@@ -21,13 +21,14 @@ export default function CardDetails({ data }) {
         <section className="CardDetails">
             {game === null ? "loading..." :
                 (<div>
-                    <p className="title">{game.name} Details</p>
-                    <img src={game.background_image} alt="game" />
+                    <p className="font-sans">{game.name} Details</p>
+                    <img className="" src={game.background_image} alt={game.name} />
                     <p className="description">{game.description_raw}</p>
                     <p className="released"><strong>Released: </strong>{game.released}</p>
                     <p className="rating"><strong>Rating: </strong>{game.rating}</p>
                     <p className="genres"><strong>Genres: </strong>{genreNames}</p>
                     <p className="platforms"><strong>Platforms: </strong>{platformNames}</p>
+
                 </div>)}
         </section>
     )

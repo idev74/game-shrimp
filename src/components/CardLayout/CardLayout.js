@@ -27,9 +27,9 @@ export default function CardLayout({ data, query, setQuery }) {
     if (gameResults !== null) {
         return (
             <section>
-                <form for="search" className="flex justify-center items-center mb-5" onSubmit={onSubmit}>
-                    <input className="w-1/2 rounded-md rounded-r-none p-3 shadow-lg shadow-cyan-300/60" type="text" value={searchTerm} onChange={handleChange} />
-                    <button className="bg-indigo-900 text-white px-6 text-lg font-semibold py-3 rounded-r-md shadow-lg shadow-pink-300/60 hover:scale-105" type="submit">Search</button>
+                <form className="flex justify-center items-center mb-5" onSubmit={onSubmit}>
+                    <input className="w-1/2 rounded-md rounded-r-none p-3 shadow-lg shadow-cyan-300/60" type="text" aria-labelledby="searchbutton" value={searchTerm} onChange={handleChange} />
+                    <button className="bg-indigo-900 text-white px-6 text-lg font-semibold py-3 rounded-r-md shadow-lg shadow-pink-300/60 hover:scale-105" id="searchbutton" type="submit">Search</button>
                 </form>
                 <main className="grid xl:grid-cols-4 lg:grid-cols-3">
                     {gameResults === [] ? <section className="text-xl justify"><p>Loading...</p></section> : gameResults.map((game) => {
@@ -47,11 +47,11 @@ export default function CardLayout({ data, query, setQuery }) {
     }
     return (
         <section className="flex-grow">
-            <form for="search" className="flex justify-center items-center mb-5" onSubmit={onSubmit}>
-                <input className="w-1/2 rounded-md rounded-r-none p-3 shadow-lg shadow-lime-400/75" type="text" value={searchTerm} onChange={handleChange} />
-                <button className="bg-indigo-800 text-white px-6 text-lg font-semibold py-3 rounded-r-md shadow-lg shadow-cyan-300/75 hover:scale-110" type="submit">Search</button>
+            <form className="flex justify-center items-center mb-5" onSubmit={onSubmit}>
+                <input className="w-1/2 rounded-md rounded-r-none p-3 shadow-lg shadow-lime-400/75" type="text" aria-label="Search" aria-labelledby="searchbutton" value={searchTerm} onChange={handleChange} />
+                <button className="bg-indigo-800 text-white px-5 text-lg font-semibold py-2 rounded-r-md shadow-lg shadow-cyan-300/75 hover:scale-110 outline outline-offset-2 outline-1" id="searchbutton" type="submit">Search</button>
             </form>
-            <main className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+            <main className="grid 4xl:grid-cols-6 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
                 {data === null ? <p className="text-2xl">Loading...</p> : data.results.map((game) => {
                     return <section>
                         <Link to={`/details/${game.id}`}>
