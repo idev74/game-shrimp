@@ -3,8 +3,6 @@ A React app that shows off video games and information about them using the [RAW
 
 Live [here](https://idev74.github.io/game-shrimp)
 
-### Final Project for ACS 1320
-
 # Demo Video (First iteration)!
 [Watch Here!](https://youtu.be/tYFYTAoKpUE)
 
