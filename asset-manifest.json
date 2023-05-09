@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/game-shrimp/static/css/main.a55bf4cd.css",
-    "main.js": "/game-shrimp/static/js/main.39b60128.js",
+    "main.css": "/game-shrimp/static/css/main.8368342e.css",
+    "main.js": "/game-shrimp/static/js/main.6ba2f041.js",
     "static/js/787.9a9b59e3.chunk.js": "/game-shrimp/static/js/787.9a9b59e3.chunk.js",
     "index.html": "/game-shrimp/index.html",
-    "main.a55bf4cd.css.map": "/game-shrimp/static/css/main.a55bf4cd.css.map",
-    "main.39b60128.js.map": "/game-shrimp/static/js/main.39b60128.js.map",
+    "main.8368342e.css.map": "/game-shrimp/static/css/main.8368342e.css.map",
+    "main.6ba2f041.js.map": "/game-shrimp/static/js/main.6ba2f041.js.map",
     "787.9a9b59e3.chunk.js.map": "/game-shrimp/static/js/787.9a9b59e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a55bf4cd.css",
-    "static/js/main.39b60128.js"
+    "static/css/main.8368342e.css",
+    "static/js/main.6ba2f041.js"
   ]
 }
