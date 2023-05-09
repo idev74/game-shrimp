@@ -10,19 +10,19 @@ export default function About() {
                 </svg>
             </header>
             <section className=" inline-flex">
-            <main className="justify-end">
-                <h2 className="text-2xl text-amber-100 font-semibold mb-10">Game Shrimp is a website for anyone to look up and favorite games from many different platforms!</h2>
-                <h3 className="text-amber-100 font-bold">How to use: </h3>
-                <ol className="text-amber-100 font-bold">
-                    <li>Search any game you desire</li>
-                    <li>Click on the game you want to see more about (platforms, videos, dev info, tags, etc.)</li>
-                    <li>Click the heart to favorite the game</li>
-                    <li>Click the "Favorites" link in the header to see your favorite games and click any platform icon to buy the game!</li>
-                </ol>
-            </main>
-            <section className="align-center justify-end ">
-                <img src={`${process.env.PUBLIC_URL}/arcade.png`} alt="illustration of an arcade machine"/>
-            </section>
+                <main className="justify-end">
+                    <h2 className="text-2xl text-amber-100 font-semibold mb-10">Game Shrimp is a website for anyone to look up and favorite games from many different platforms!</h2>
+                    <h3 className="text-amber-100 font-bold">How to use: </h3>
+                    <ol className="text-amber-100 font-bold">
+                        <li>Search any game you desire</li>
+                        <li>Click on the game you want to see more about (platforms, videos, dev info, tags, etc.)</li>
+                        <li>Click the heart to favorite the game</li>
+                        <li>Click the "Favorites" link in the header to see your favorite games and click any platform icon to buy the game!</li>
+                    </ol>
+                </main>
+                <section className="align-center justify-end ">
+                    <img src={`${process.env.PUBLIC_URL}/arcade.png`} alt="illustration of an arcade machine" />
+                </section>
             </section>
         </section>
     )
