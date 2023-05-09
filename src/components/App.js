@@ -6,44 +6,30 @@ import CardLayout from './CardLayout/CardLayout'
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import About from './About/About';
+import NavBar from './NavBar/NavBar';
 
 const apiURL = process.env.REACT_APP_API_URL
 const apiKey = process.env.REACT_APP_API_KEY
 
 export default function App() {
   const [query, setQuery] = useState('')
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(null) 
 
   useEffect(() => {
     async function getStuff() {
-      let res = await fetch(`${apiURL}?page=${1}&page_size=40&key=${apiKey}`)
+      let res = await fetch(`${apiURL}?page_size=40&key=${apiKey}`)
       let json = await res.json()
-      res = await fetch(`${apiURL}?page=${2}&page_size=40&key=${apiKey}`)
-      let update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${3}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${4}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${5}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${6}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
-      res = await fetch(`${apiURL}?page=${7}&page_size=40&key=${apiKey}`)
-      update = await res.json()
-      json.results.push(...update.results)
+      console.log(json)
       setData(json)
     }
     getStuff()
   }, []);
 
+
   return (
-    <div className="App">
-      <Header />
+    <main className="flex flex-col bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-purple-500 to-blue-500 min-h-screen">
+      <Header id="heading" />
+      <NavBar class="bg-white" id="nav" />
       <Routes>
         <Route path="/" element={
           <CardLayout
@@ -55,6 +41,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
-    </div>
+    </main>
   );
 }
