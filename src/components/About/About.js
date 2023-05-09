@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
     return (
-        <div className="h-100 mx-5">
+        <section className="h-100 mx-5">
             <header className="inline-flex">
                 <h1 className="text-8xl text-amber-100 font-semibold my-5 mr-2">About</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="beige" class="w-24 h-24">
@@ -24,6 +24,6 @@ export default function About() {
                 <img src={`${process.env.PUBLIC_URL}/arcade.png`} alt="illustration of an arcade machine"/>
             </section>
             </section>
-        </div>
+        </section>
     )
 }
