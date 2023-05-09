@@ -2,7 +2,7 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-A React app that shows off video games and information about them using the [RAWG API](https://rawg.io/apidocs).
+A responsive React app that shows off video games and information about them using the [RAWG API](https://rawg.io/apidocs).
 Live [here](https://idev74.github.io/game-shrimp)
 
 # Demo Video (First iteration)!
