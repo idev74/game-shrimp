@@ -6,6 +6,7 @@ import CardLayout from './CardLayout/CardLayout'
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import About from './About/About';
+import NavBar from './NavBar/NavBar';
 
 const apiURL = process.env.REACT_APP_API_URL
 const apiKey = process.env.REACT_APP_API_KEY
@@ -23,6 +24,7 @@ export default function App() {
     }
     getStuff(page)
   }, [page]);
+
 
   return (
     <div className="App">
@@ -47,6 +49,6 @@ export default function App() {
         <Route path="#/about" element={<About />} />
       </Routes>
       <Footer />
-    </div>
+    </main>
   );
 }
