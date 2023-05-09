@@ -13,23 +13,32 @@ const apiKey = process.env.REACT_APP_API_KEY
 
 export default function App() {
   const [query, setQuery] = useState('')
-  const [data, setData] = useState(null) 
+  const [data, setData] = useState(null)
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
-    async function getStuff() {
-      let res = await fetch(`${apiURL}?page_size=40&key=${apiKey}`)
-      let json = await res.json()
-      console.log(json)
-      setData(json)
+    async function getStuff(page) {
+      const res = await fetch(`${apiURL}?page=${page}&page_size=40&key=${apiKey}`)
+      const json = await res.json()
+      setData(json.results)
     }
-    getStuff()
-  }, []);
+    getStuff(page)
+  }, [page]);
 
 
   return (
     <main className="flex flex-col bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-purple-500 to-blue-500 min-h-screen">
       <Header id="heading" />
       <NavBar class="bg-white" id="nav" />
+      <section className=''>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => {
+          return (
+            <button onClick={() => setPage(num)}>
+              {num}
+            </button>
+          )
+        })}
+      </section>
       <Routes>
         <Route path="/" element={
           <CardLayout

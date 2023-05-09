@@ -52,7 +52,7 @@ export default function CardLayout({ data, query, setQuery }) {
                 <button className="bg-indigo-800 text-white px-5 text-lg font-semibold py-2 rounded-r-md shadow-lg shadow-cyan-300/75 hover:scale-110 outline outline-offset-2 outline-1" id="searchbutton" type="submit">Search</button>
             </form>
             <main className="grid 4xl:grid-cols-6 3xl:grid-cols-5 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
-                {data === null ? <p className="text-2xl">Loading...</p> : data.results.map((game) => {
+                {data === null ? <p className="text-2xl">Loading...</p> : data.map((game) => {
                     return <section>
                         <Link to={`/details/${game.id}`}>
                             <CardList

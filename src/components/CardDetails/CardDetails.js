@@ -4,7 +4,7 @@ import React from 'react';
 export default function CardDetails({ data }) {
     const { id } = useParams()
 
-    const game = data.results.filter((game) => {
+    const game = data.filter((game) => {
         // eslint-disable-next-line eqeqeq
         return game.id == id
     })[0]
