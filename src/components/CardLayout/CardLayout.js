@@ -51,7 +51,7 @@ export default function CardLayout({ data, query, setQuery }) {
                 <input className="w-1/2 rounded-md rounded-r-none p-3 shadow-lg shadow-lime-400/75" type="text" aria-label="Search" aria-labelledby="searchbutton" value={searchTerm} onChange={handleChange} />
                 <button className="bg-indigo-800 text-white px-5 text-lg font-semibold py-2 rounded-r-md shadow-lg shadow-cyan-300/75 hover:scale-110 outline outline-offset-2 outline-1" id="searchbutton" type="submit">Search</button>
             </form>
-            <main className="grid 4xl:grid-cols-6 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+            <main className="grid 4xl:grid-cols-6 3xl:grid-cols-5 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
                 {data === null ? <p className="text-2xl">Loading...</p> : data.results.map((game) => {
                     return <section>
                         <Link to={`/details/${game.id}`}>
