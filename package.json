@@ -1,6 +1,6 @@
 {
   "name": "game-shrimp",
-  "homepage": "https://gameshrimp.software",
+  "homepage": "http://gameshrimp.software",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
